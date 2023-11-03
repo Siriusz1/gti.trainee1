@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
     <title>GTI ENGENHARIA</title>
 </head>
 <body>
     <header>
         <nav>
             <img class="logo" src="imagens/logo.png" alt="Logo">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
             <ul class="nav-list">
-                <li class="lista"><a href="#">SERVICES</a></li>
-                <li class="lista"><a href="#">PORTFOLIO</a></li>
-                <li class="lista"><a href="#">ABOUT</a></li>
-                <li class="lista"><a href="#">TEAM</a></li>
-                <li class="lista"><a href="#">CONTACT</a></li>
+                <li class="lista"><a href="#sectionServices">sERVIÇOS</a></li>
+                <li class="lista"><a href="#sectionPortfolio">PORTFOLIO</a></li>
+                <li class="lista"><a href="#sectionAbout">SOBRE</a></li>
+                <li class="lista"><a href="#sectionTeam">EQUIPE</a></li>
+                <li class="lista"><a href="#contact-us">CONTATOS</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +34,7 @@
         <section id="sectionServices">
             <div class="container-header">
                 <h2 class="pageTitle">SERVIÇOS</h2>
-                <h3 class="subPageTitle">OFERECEMOS OS MELHORES SERVIÇOS AOS NOSSOS CLIENTES</h3>
+                <p class="subPageTitle">OFERECEMOS OS MELHORES SERVIÇOS AOS NOSSOS CLIENTES</p>
             </div>
             <div id="services">
                 <div class="individualService">
@@ -51,7 +57,7 @@
         <section id="sectionPortfolio">
             <div class="container-header">
                 <h2 class="pageTitle">PORTFOLIO</h2>
-                <h3 class="subPageTitle">ALGUNS PROJETOS QUE REALIZAMOS</h3>
+                <p class="subPageTitle">ALGUNS PROJETOS QUE REALIZAMOS </p>
             </div>
             <div id="portfolioContent">
                 <div id="hollow">
@@ -75,19 +81,72 @@
         </section>
         <section id="sectionAbout">
             <div class="container-header">
-                <h2 class="pageTitle">ABOUT</h2>
-                <h3 class="subPageTitle">UM POUCO DA NOSSA JORNADA ATÉ AQUI</h3>
+                <h2 class="pageTitle">SOBRE</h2>
+                <p class="subPageTitle">UM POUCO DA NOSSA JORNADA ATÉ AQUI </p>
+            </div>
+            <div class="timeline">
+                <div class="container-about left-container">
+                    <img src="imagens/timeline/lampada.png" alt="">
+                    <div class="text-box">
+                        <h2>Nosso humilde começo</h2>
+                        <small>2018 - 2019</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit labore enim dolorum officiis beatae eaque ullam quaerat, dolore assumenda molestias necessitatibus hic quo reiciendis neque. Deleniti, cupiditate. Optio, inventore!</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="container-about right-container">
+                    <img src="imagens/timeline/nascimento.png" alt="">
+                    <div class="text-box">
+                        <h2>Nasce uma agência</h2>
+                        <small>2019 - 2020</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit labore enim dolorum officiis beatae eaque ullam quaerat, dolore assumenda molestias necessitatibus hic quo reiciendis neque. Deleniti, cupiditate. Optio, inventore!</p>
+                        <span class="right-container-arrow""></span>
+                    </div>
+                </div>
+                <div class="container-about left-container">
+                    <img src="imagens/timeline/Fase3.png" alt="">
+                    <div class="text-box">
+                        <h2>Transição para serviço completo</h2>
+                        <small>2020 - 2021</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit labore enim dolorum officiis beatae eaque ullam quaerat, dolore assumenda molestias necessitatibus hic quo reiciendis neque. Deleniti, cupiditate. Optio, inventore!</p>
+                        <div class="left-container-arrow"></div>
+                    </div>
+                </div>
+                <div class="container-about right-container">
+                    <img src="imagens/timeline/Fase 4.png" alt="">
+                    <div class="text-box">
+                        <h2>Fase dois de expansão</h2>
+                        <small>2021 - 2022</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit labore enim dolorum officiis beatae eaque ullam quaerat, dolore assumenda molestias necessitatibus hic quo reiciendis neque. Deleniti, cupiditate. Optio, inventore!</p>
+                        <div class="right-container-arrow"></div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="sectionTeam">
             <div class="container-header">
                 <h2 class="pageTitle">OUR AMAZING TEAM</h2>
-                <h3 class="subPageTitle">A EQUIPE QUE TORNA TUDO ISSO POSSÍVEL </h3>
+                <p class="subPageTitle">A EQUIPE QUE TORNA TUDO ISSO POSSÍVEL </p>
             </div>
             <div id="team-content">
-                <img src="imagens/Time/Caio Vini.png" alt="Equipe">
-                <img src="imagens/Time/José.png" alt="Equipe">
-                <img src="imagens/Time/Marcos.png" alt="Equipe">
+                <img class="team-image" src="imagens/Time/Caio Vini.png" alt="Equipe">
+                <img class="team-image" src="imagens/Time/José.png" alt="Equipe">
+                <img class="team-image" src="imagens/Time/Marcos.png" alt="Equipe">
+                <div class="social-midia-icons">
+                    <img src="imagens/icons/764548_behance_hexagon_media_social_icon.svg" alt="Behance">
+                    <img src="imagens/icons/764565_hexagon_media_social_twitter_icon.svg" alt="Twiter">
+                    <img src="imagens/icons/764615_github_hexagon_media_social_icon.svg" alt="Github">
+                </div>
+                <div class="social-midia-icons">
+                    <img src="imagens/icons/764548_behance_hexagon_media_social_icon.svg" alt="Behance">
+                    <img src="imagens/icons/764565_hexagon_media_social_twitter_icon.svg" alt="Twiter">
+                    <img src="imagens/icons/764615_github_hexagon_media_social_icon.svg" alt="Github">
+                </div>
+                <div class="social-midia-icons">
+                    <img src="imagens/icons/764548_behance_hexagon_media_social_icon.svg" alt="Behance">
+                    <img src="imagens/icons/764565_hexagon_media_social_twitter_icon.svg" alt="Twiter">
+                    <img src="imagens/icons/764615_github_hexagon_media_social_icon.svg" alt="Github">
+                </div>
                 <p class="name">Caio Vinicius</p>
                 <p class="name">José Nazaré</p>
                 <p class="name">José Marcos</p>
@@ -99,9 +158,37 @@
                 <p class="footer-team">Esses são apenas alguns integrantes de uma família muito maior! <br><a href="#">Conheça o nosso time</a> </p>
             </div>
         </section>
+        <section id="partnerships">
+            <img src="imagens/parcerias/Activision-logo-branca.png" alt="Activision">
+            <img src="imagens/parcerias/Blizzard-logo.png" alt="Blizzard">
+            <img src="imagens/parcerias/Sony-logo-branca.png" alt="Sony">
+            <img src="imagens/parcerias/FromSoftware-logo-branca.png" alt="FromSoftware">
+        </section>
+        <section id="contact-us">
+            <div class="container-header">
+                <h2 class="pageTitle">CONTATO</h2>
+                <p class="subPageTitle">PREENCHA OS DADOS PARA ENTRAR EM CONTATO</p>
+            </div>
+            <div id="form-container">
+               <form action="" method="post">
+                    <input type="text" name="name" placeholder="Digite seu nome*" autocomplete="off">
+                    <input type="email" nome="email" placeholder="Digite seu email*">
+                    <input type="tel" nome="number" placeholder="Digite seu número*">
+                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem*"></textarea>
+                    <button id="btn">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
-
+        <p>Copyright&copy; Your Website 2023</p>
+        <div>
+            <img src="imagens/icons/764548_behance_hexagon_media_social_icon.svg" alt="Behance">
+            <img src="imagens/icons/764565_hexagon_media_social_twitter_icon.svg" alt="Twiter">
+            <img src="imagens/icons/764615_github_hexagon_media_social_icon.svg" alt="Github">
+        </div>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms of Use</a></p>
     </footer>
 </body>
 </html>

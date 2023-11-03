@@ -287,7 +287,7 @@
         margin-top: 10%;
     }
     #sectionPortfolio{
-        height: 75vh;
+        height: 100vh;
     }
 
     #rd2, #hollow, #castlevania, #bully, #itt, #ds3 {
@@ -305,6 +305,10 @@
         width: 105px;
         font-size: 10px;
         line-height: 12px;
+    }
+
+    .container-about{
+        padding-left: 100px;
     }
     #sectionTeam{
         height: 65vh;

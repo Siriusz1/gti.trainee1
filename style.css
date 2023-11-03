@@ -17,6 +17,7 @@ a{
 }
 
 nav{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,15 +41,25 @@ nav{
     letter-spacing: 3px;
     margin-left: 32px;
     transition: .35s;
+}
+.mobile-menu{
     cursor: pointer;
+    display: none;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
 }
 /*banner*/
 .banner{
     height: 600px;
-    width: 100vw;
+    width: 100%;
     background: url(imagens/Game-Development-01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 100% 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,20 +87,21 @@ button{
     width: 150px;
     height: 50px;
     padding: 10px;
-    color: white;
-    background-color: #F2A827;
+    background-color: transparent;
+    border: 2px solid #F2A827;
+    color: #F2A827;
     border-radius: 5px;
-    border:none;
     margin-right: 600px;
     text-align: center;
     text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    transition-duration: 0.7;
+    cursor: pointer;    
+    transition-duration: 0.5s;
 }
 
 #btn:hover{
-        opacity: 0.5  ;
+    background-color: #F2A827;
+    color: white;
+    transition-duration:0.5s;
 }
 /*Serviços*/
 #sectionServices{
@@ -149,7 +161,7 @@ button{
     box-shadow: 7px 10px 10px -3px rgba(0,0,0,0.75);
 -webkit-box-shadow: 7px 10px 10px -3px rgba(0,0,0,0.75);
 -moz-box-shadow: 7px 10px 10px -3px rgba(0,0,0,0.65);
-max-width: 300px;
+width: 300px;
 transition: 0.5s;
 }
 
@@ -167,7 +179,7 @@ padding-bottom: 8%;
 /*Portfolio*/
 
 #sectionPortfolio{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: #120A39;
     display: flex;
@@ -176,7 +188,6 @@ padding-bottom: 8%;
 }
 
 #portfolioContent{
-    width: 100wv;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
@@ -234,13 +245,135 @@ transition: 0.5s;
 /*About*/
 #sectionAbout{
     width: 100%;
-    height: 25vh;
+    height: 150vh;
     background: #190F4B;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.timeline{
+    position: relative; 
+    max-width: 1200px;
+    margin: 100px auto;
+}
 
+.container-about{
+    padding: 40px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    z-index: 10;
+    opacity: 0; 
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container-about:nth-child(1){
+    animation-delay: 0s;
+}
+.container-about:nth-child(2){
+    animation-delay: 1s;
+}
+.container-about:nth-child(3){
+    animation-delay: 2s;
+}
+.container-about:nth-child(4){
+    animation-delay: 3s;
+}
+.container-about:nth-child(5){
+    animation-delay: 4s;
+}
+.container-about:nth-child(6){
+    animation-delay: s;
+}
+
+
+.text-box{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container{
+    left: 0;
+}
+.right-container{
+    left:50%;
+    border-left: white;
+}
+
+.container-about img{
+    position: absolute;
+    width: 70px;
+    border-radius: 50%;
+    right: -35px;
+    top: 32px;
+    z-index: 10;
+}
+.right-container img{
+    left: -35px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0.5; /* O problema está aqui */
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom:  15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom:  15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+/*Team*/
 #sectionTeam{
     width: 100%;
     height: 85vh;
@@ -258,7 +391,7 @@ transition: 0.5s;
     padding-inline:10% ;
 }
 
-#team-content img{
+.team-image{
     width: 50%;
 }
 
@@ -273,12 +406,130 @@ transition: 0.5s;
     font-family: 'Josefin Slab', serif;
     font-size: 24px;
 }
-
+.social-midia-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.social-midia-icons img{
+    width: 75%;
+    transition: 0.5s;
+}
+.social-midia-icons img:hover{
+    transition: 0.5s;
+    scale: 1.2;
+}
 .footer-team{
-    margin-top: 150px;
+    margin-top: 10%;
     text-align: center;
     color: white;
     font-family: 'Josefin Slab', serif;
     font-size: 24px;
     line-height: 25px;
 }
+
+#partnerships{
+    width: 100%;
+    height: 15vh;
+    background: #190F4B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3%;
+}
+
+#partnerships img{
+    opacity: 0.5;
+    max-width: 15%;
+    max-height: 50%;
+}
+
+/*Contact us*/
+#contact-us{
+    background: url(imagens/contact\ us.png);
+    width: 100%;
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 15% 25%;
+}
+
+#form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 10%;
+}
+
+
+#contact-us form{
+    width: 65%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    padding: 2%;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    font-family: 'Inter', sans-serif;
+}
+
+form input:focus{
+    scale: 1.01;
+}
+
+form textarea {
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.5s;
+    border-radius: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+form textarea:focus{
+    scale: 1.01;
+}
+
+form button{
+    margin-left: 35%;
+}
+
+#contact-us .pageTitle{
+    color: #d5bae9;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background: #190F4B;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    gap: 15%;
+    padding-left: 10%;
+}
+
+footer img{
+    height: 50%;
+    transition: 0.5s;
+}
+
+footer img:hover{
+    transition: 0.5s;
+    scale: 1.2;
+}
+
+footer p{
+    color: #F2A827;
+}
+

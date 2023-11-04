@@ -26,6 +26,8 @@ nav{
     height: 8vh;
     padding-inline: 100px;
     border: none;
+    z-index: 21;
+    position: fixed;
 }
 
 .nav-list{

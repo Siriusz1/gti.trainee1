@@ -407,3 +407,74 @@
         font-size: 13px;
     }
 }
+
+@media screen and (max-height: 390px) and (max-width: 844px){
+     nav{
+        height: 20vh;
+        width: 100%;
+        padding-inline: 0;
+        justify-content: center;
+     }
+
+     #sectionPortfolio{
+        height: 200vh;
+     }
+     #portfolioContent{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+     }
+     #rd2, #hollow, #castlevania, #bully, #itt, #ds3 {
+        width: 125%;
+        height: 150px;
+     }
+     .descriptionPortfolio{
+        padding-inline:0 ;
+        width: 105px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    #sectionAbout{
+        height: 300vh;
+    }
+    .timeline{
+        margin-top: 5%;
+    }
+    .container-about{
+        padding: 1% 70px;
+    }
+
+    .text-box{
+        padding-inline: 10%;
+    }
+    #sectionTeam{
+        height: 150vh;
+    }
+    .pageTitle{
+        font-size: 22px;
+    }
+    .subPageTitle{
+        font-size: 14px;
+    }
+    #contact-us{
+        height: 150vh;
+        background-position: 100% 20%;
+    }
+    #form-container{
+        height: 50%;
+        justify-content: flex-start;
+    }
+    form input{
+        height: 10%;
+        width: 70%;
+    }
+    form textarea{
+        height: 50%;
+        width: 70%;
+    }
+    .container-head{
+        margin-bottom: 0;
+    }
+    footer{
+        font-size: 10px;
+    }
+}
